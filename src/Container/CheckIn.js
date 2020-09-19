@@ -61,7 +61,6 @@ export default class CheckIn extends Component {
                                   <div className="section-time">
                                     <div>{this.state.time.toDateString()}</div>
                                     <div>{this.state.time.toLocaleTimeString()}</div>
-                                    <p>{this.state.shift}</p>
                                   </div>
                               </div>
                           </div>
