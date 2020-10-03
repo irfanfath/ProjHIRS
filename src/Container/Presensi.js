@@ -103,7 +103,7 @@ handleBack = () => {
                               </div>
                           </div>
                           <div className="about-column w-col w-col-7 w-col-stack">
-                              <div className="form-block-3">
+                              <div className="form-block-2">
                                   <div className="w-form">
                                       <div className="w-row-presensi">
                                             <table id='students'>

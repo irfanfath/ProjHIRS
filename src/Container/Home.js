@@ -5,7 +5,8 @@ class Home extends Component {
   //   curTime : new Date().toLocaleString(),
   // }
   state = {
-    time: new Date()
+    time: new Date(),
+    showConfirm: false
   };
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
@@ -32,6 +33,24 @@ class Home extends Component {
 
   handleProfile = () => {
     this.props.history.push('/profile')
+  }
+
+  ConfirModal = () => {
+    return (
+      <div className="modal-show">
+          <div className="modal-dialog modal-confirm">
+              <div className="modal-content">
+                  <div className="modal-header flex-column">
+                      <h4 className="modal-title w-100">Are you sure?</h4>
+                  </div>
+                  <div className="modal-footer justify-content-center">
+                      <button type="button" className="btn btn-secondary">No</button>
+                      <button type="button" className="btn btn-danger">Yes</button>
+                  </div>
+              </div>
+          </div>
+      </div>  
+    )
   }
 
   render() {
@@ -74,6 +93,10 @@ class Home extends Component {
                                                 </div>
                                               </li>
                                           </div>
+                                          {/* <div className="trigger-btn" onClick={()=> this.setState({showConfirm: true})}>Click to Open Confirm Modal</div> */}
+                                          {
+                                            this.state.showConfirm ? <this.ConfirModal /> : null
+                                          }
                                       </div>
                                   </div>
                               </div>

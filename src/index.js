@@ -17,6 +17,7 @@ import { Route, HashRouter } from "react-router-dom";
 import DynamicScrollToTop from "./Component/DynamicScrollToTop";
 import Home from "./Container/Home";
 import "../src/Assets/Css/style.css"
+import "../src/Assets/Css/modal.css"
 import "../src/Assets/Css/min.style.css"
 import Shift from './Container/Shift';
 import CheckIn from './Container/CheckIn';
