@@ -13,7 +13,8 @@ export default class CheckOut extends Component {
     longitude: localStorage.getItem('longitude'),
     ipAddress: "",
     type: localStorage.getItem('type'),
-    showLoader: false
+    showLoader: false,
+    showConfirm: false
   };
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
@@ -34,6 +35,24 @@ export default class CheckOut extends Component {
     this.setState({
       time: new Date(),
     });
+  }
+
+  ConfirModal = () => {
+    return (
+      <div className="modal-show">
+          <div className="modal-dialog modal-confirm">
+              <div className="modal-content">
+                  <div className="modal-header flex-column">
+                      <h4 className="modal-title w-100">Are you sure?</h4>
+                  </div>
+                  <div className="modal-footer justify-content-center">
+                      <button type="button" className="btn btn-secondary" onClick={()=> this.setState({showConfirm: false})}>No</button>
+                      <button type="button" className="btn btn-danger" onClick={this.handleSubmit}>Yes</button>
+                  </div>
+              </div>
+          </div>
+      </div>  
+    )
   }
 
   LoaderModal = () => {
@@ -121,7 +140,10 @@ export default class CheckOut extends Component {
                                       <div className="w-row">
                                       <label htmlFor="Contact-Message" className="field-label-2 contact-us-field gray">Notes:</label>
                                       <textarea id="Contact-Message" name="notes" placeholder="Your Activity" required="" className="contact-form message gray w-input"></textarea>
-                                      <div className="center-button-block"><input type="submit" value="Check Out" className="button-2 w-button" onClick={this.handleSubmit} /></div>
+                                      <div className="center-button-block"><input type="submit" value="Check Out" className="button-2 w-button" onClick={()=> this.setState({showConfirm: true})} /></div>
+                                      {
+                                        this.state.showConfirm ? <this.ConfirModal /> : null
+                                      }
                                       {
                                         this.state.showLoader ? <this.LoaderModal /> : null
                                       }
