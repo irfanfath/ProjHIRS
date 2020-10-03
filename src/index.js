@@ -21,6 +21,10 @@ import "../src/Assets/Css/min.style.css"
 import Shift from './Container/Shift';
 import CheckIn from './Container/CheckIn';
 import Login from './Container/Login';
+import CheckOut from './Container/CheckOut';
+import Profile from './Container/Profile';
+import Presensi from './Container/Presensi';
+import LoginAdmin from './Container/LoginAdmin';
 
 class Main extends React.Component {
   render() {
@@ -31,9 +35,13 @@ class Main extends React.Component {
         <HashRouter>
           <DynamicScrollToTop/>
               <Route exact path="/" component={Home}/>
-              <Route path = "/shift" component={Shift}/>
+              <Route path="/profile" component={Profile}/>
+              <Route path="/presensi" component={Presensi}/>
+              <Route path="/shift" component={Shift}/>
               <Route path="/checkin" component={CheckIn}/>
+              <Route path="/checkout" component={CheckOut}/>
               <Route path="/login" component={Login}/>
+              <Route path="/loginadmin" component={LoginAdmin}/>
           </HashRouter>
       </div>
     );

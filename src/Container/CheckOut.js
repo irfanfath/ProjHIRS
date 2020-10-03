@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import axios from "axios"
 import moment from "moment"
  
-export default class CheckIn extends Component {
+export default class CheckOut extends Component {
   state = {
     employee_id: localStorage.getItem('profile'),
     time: new Date(),
     unixtime: moment(new Date()).unix(),
     timeunix: "1600587270",
-    status: "check-in",
+    status: "check-out",
     latitude: localStorage.getItem('latitude'),
     longitude: localStorage.getItem('longitude'),
     ipAddress: "",
@@ -44,6 +44,13 @@ export default class CheckIn extends Component {
     )
   }
 
+  handleLogOut = () => {
+    //   localStorage.removeItem('token')
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.reload()
+  }
+
   handleSubmit = () => {
     this.setState({
       showLoader: true
@@ -53,8 +60,8 @@ export default class CheckIn extends Component {
         "time" : this.state.time,
         "type" : this.state.type,
         "status" : this.state.status,
-        "longitude" : this.state.longitude,
         "latitude" : this.state.latitude,
+        "longitude" : this.state.longitude,
         "ipAddress" : this.state.ipAddress
     }
     const data = payload
@@ -67,10 +74,12 @@ export default class CheckIn extends Component {
     }).then((res) => {
         console.log(res)
         if(res.status === 201){
-            localStorage.setItem("status", "checkin")
             alert(res.data.message)
             this.setState({showLoader: false})
             this.props.history.push("/")
+            localStorage.clear();
+            sessionStorage.clear();
+            window.location.reload()
         }else {
             alert("Check-In Gagal")
             this.setState({showLoader: false})
@@ -104,7 +113,7 @@ export default class CheckIn extends Component {
                                       <div className="w-row">
                                       <label htmlFor="Contact-Message" className="field-label-2 contact-us-field gray">Notes:</label>
                                       <textarea id="Contact-Message" name="notes" placeholder="Your Activity" required="" className="contact-form message gray w-input"></textarea>
-                                      <div className="center-button-block"><input type="submit" value="Check In" className="button-2 w-button" onClick={this.handleSubmit} /></div>
+                                      <div className="center-button-block"><input type="submit" value="Check Out" className="button-2 w-button" onClick={this.handleSubmit} /></div>
                                       {
                                         this.state.showLoader ? <this.LoaderModal /> : null
                                       }

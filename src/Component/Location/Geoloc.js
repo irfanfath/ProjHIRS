@@ -13,7 +13,7 @@ class Geoloc extends React.Component {
           //   <div>longitude : {this.props.coords.longitude}</div>
           // </div>
             <div>
-              {localStorage.setItem("latitude", this.props.coords.latitude)}
+              {localStorage.setItem("latitude", this.props.coords.latitude,this.props.coords.longitude)}
               {localStorage.setItem("longitude", this.props.coords.longitude)}
             </div>
           : <div>Getting the location data&hellip; </div>;

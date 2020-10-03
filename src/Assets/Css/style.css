@@ -788,6 +788,78 @@ textarea.w-select {
 .w-hidden-main {
   display: none !important;
 }
+#posisi-loader {
+  background-color: rgba(0,0,0,0.83);
+  position: fixed; /* Stay in place */
+  z-index: 1054; /* Sit on top */
+  padding-top: 20%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+}
+
+.title-profile {
+  font-size: 15px;
+  color: gray;
+  text-align: right;
+}
+
+.title-profile:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.title-home {
+  text-align: left;
+  color: gray;
+  font-size: 15px;
+}
+
+.title-home:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.title-gantipass {
+  font-size: 30px;
+  color: gray;
+  margin-bottom: 65px;
+}
+
+.title-loader {
+  color: #fff;
+  text-align: center;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  padding-left: 47%;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 @media screen and (max-width: 991px) {
   .w-container {
       max-width: 728px;
@@ -1846,6 +1918,10 @@ textarea.w-select {
   position: static;
 }
 @media screen and (max-width: 991px) {
+  .title-gantipass {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
   .w-nav[data-collapse="medium"] .w-nav-menu {
       display: none;
   }
@@ -5365,7 +5441,6 @@ p {
   font-family: monospace;
   color: #000;
   font-size: 28px;
-  margin-top: 30px;
   line-height: 40px;
   font-weight: 800;
 }
@@ -5867,15 +5942,12 @@ p {
 
 .button-2.contact {
   display: block;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding: 20px 40px;
+  margin-bottom: 20px;
+  padding: 12px 25px;
   border-color: transparent;
   background-color: #ac1313;
-  font-family: Poppins, sans-serif;
   font-size: 12px;
-  line-height: 30px;
-  font-weight: 400;
+  float: right;
   text-align: center;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -5883,6 +5955,39 @@ p {
 
 .button-2.contact:hover {
   background-color: #ff5f0f;
+}
+
+#students {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+}
+
+#students td, #students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: #000;
+}
+
+#students tr:nth-child(even){background-color: #f2f2f2;}
+
+#students tr:hover {background-color: #ddd;}
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.title-table {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+  color: gray;
 }
 
 .center-button-block {
@@ -5985,7 +6090,7 @@ p {
 
 .map-wrapper {
   height: 305px;
-  padding: 60px;
+  padding: 30px;
   background-color: #fff;
   margin-bottom: 20px;
   border-right: 3px solid #dddddd;

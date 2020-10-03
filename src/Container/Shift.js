@@ -9,6 +9,10 @@ export default class Shift extends Component {
   };
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
+    const session = localStorage.getItem('session')
+      if (session !== "active"){
+        this.props.history.push("/login")
+      }
   }
   componentWillUnmount() {
     clearInterval(this.timerID);
