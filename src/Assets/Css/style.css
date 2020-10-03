@@ -4885,7 +4885,9 @@ p {
 }
 
 .section.gray {
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
+  background-image: url("../Images/bg.jpg");
+  height: 100vh;
 }
 
 .section.gray.testimonials {
@@ -5924,7 +5926,7 @@ p {
 
 .form-block-3 {
   height: 305px;
-  padding: 30px;
+  padding: 70px;
   background-color: #fff;
   margin-bottom: 20px;
   border-radius: 10px;
