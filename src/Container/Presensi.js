@@ -34,7 +34,7 @@ class Presensi extends Component {
   }
 
   handleGetAttendaceById = (employeeId) => {
-      console.log(employeeId)
+    console.log(employeeId)
     axios.get('https://new-hris.irfanfath.site/attendances', {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -63,16 +63,10 @@ class Presensi extends Component {
        const { shift_name } = data.shifts //destructuring
        return (
           <tr key={key}>
-             {/* <td>{nik}</td> */}
-             {/* <td>{name}</td> */}
-             {/* <td>{position}</td> */}
              <td>{status}</td>
              <td>{date}</td>
              <td>{time}</td>
-             {/* <td>{attendances_desc}</td> */}
-             {/* <td>{type}</td> */}
              <td>{shift_name}</td>
-             {/* <td>{shift_desc}</td> */}
           </tr>
        )
     })
