@@ -82,7 +82,12 @@ export default class CheckIn extends Component {
       }); 
 }
 
+  handleProfile = () => {
+    this.props.history.push('/profile')
+  }
+
   render() {
+    const name = localStorage.getItem('Name')
     return (
       <div className="wrapper-pages">
           <div className="section gray">
@@ -91,7 +96,10 @@ export default class CheckIn extends Component {
                       <div className="columns-2 w-row">
                           <div className="about-column w-col w-col-5 w-col-stack">
                               <div className="map-wrapper">
-                                  <h1 className="section-tittle">Have a nice day!</h1>
+                                <div className="title-profile" onClick={this.handleProfile}>My Profile
+                                  <img src="https://img.icons8.com/ios-glyphs/32/000000/edit-user-male.png" alt="" />
+                                </div>
+                                  <h1 className="section-tittle">Hai, {name}</h1>
                                   <div className="section-time">
                                     <div>{this.state.time.toDateString()}</div>
                                     <div>{this.state.time.toLocaleTimeString()}</div>

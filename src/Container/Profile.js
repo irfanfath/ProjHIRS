@@ -98,9 +98,7 @@ class Profile extends Component {
                                   <div className="w-form">
                                       <div className="w-row">
                                         <div className="title-gantipass">Ganti Password</div>
-                                          <div className="w-dyn-item w-col-mobile-home w-col-6">
                                             <input type="text" name="Contact-Name" placeholder="New Password" className="text-field-3 contact-form gray w-input" onChange={(e) => this.setState({password: e.target.value})}/>
-                                          </div>
                                           <div className="center-button-block"><input type="submit" value="Submit" className="button-2 w-button" onClick={() => this.handleUpdate(this.state.password)} /></div>
                                           {
                                               this.state.showLoader ? <this.LoaderModal /> : null

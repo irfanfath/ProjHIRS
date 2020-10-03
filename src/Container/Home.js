@@ -60,7 +60,7 @@ class Home extends Component {
                                       <div className="w-row">
                                           <div className="w-dyn-item w-col-mobile-home w-col-6">
                                           <li>
-                                              <div className="round green" onClick={()=> this.handleMove(localStorage.setItem("type", "WFO"))}> 
+                                              <div className="round red" onClick={()=> this.handleMove(localStorage.setItem("type", "WFO"))}> 
                                                 <img src="https://img.icons8.com/dotty/64/000000/link-company-parent.png" alt="" />
                                                 <div className="title-type">WFO</div>
                                               </div>
@@ -68,7 +68,7 @@ class Home extends Component {
                                           </div>
                                           <div className="w-dyn-item w-col-mobile-home w-col-6">
                                               <li>
-                                                <div className="round green" onClick={()=> this.handleMove(localStorage.setItem("type", "WFH"))}> 
+                                                <div className="round red" onClick={()=> this.handleMove(localStorage.setItem("type", "WFH"))}> 
                                                 <img src="https://img.icons8.com/wired/64/000000/work-from-home.png" alt ="" />
                                                   <div className="title-type">WFH</div>
                                                 </div>

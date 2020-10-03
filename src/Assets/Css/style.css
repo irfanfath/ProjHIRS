@@ -722,6 +722,12 @@ textarea.w-select {
   clear: both;
 }
 .w-row .w-row {
+  margin-top: 50px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.w-row-presensi {
   margin-left: 0;
   margin-right: 0;
 }
@@ -5913,6 +5919,17 @@ p {
 }
 
 .form-block-2 {
+  /* padding: 60px;
+  background-color: #fff;
+  border-radius: 10px; */
+  height: 305px;
+  padding: 30px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.form-block-3 {
   padding: 60px;
   background-color: #fff;
   border-radius: 10px;

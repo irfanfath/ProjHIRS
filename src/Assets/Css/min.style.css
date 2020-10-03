@@ -98,13 +98,13 @@ li {
     margin-top: 5px;
 }
 
-.green {
-    background-color: rgba(1,151,171,1);
+.red {
+    background-color: #ad0707;
     color: #fff;
     border-color: rgba(0,63,71,.2);
 }
 
-.green:hover {
+.red:hover {
     color: #fff;
 }
 
