@@ -46,7 +46,7 @@ class Profile extends Component {
         "password" : this.state.password
     }
     let id = localStorage.getItem("profile")
-    axios.put(`https://new-hris.irfanfath.site/employees/${id}`, data, {
+    axios.put(`https://api.airindonesia.co.id/employees/${id}`, data, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
             Accept: "application/json",

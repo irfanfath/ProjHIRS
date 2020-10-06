@@ -36,7 +36,7 @@ export default class Login extends Component{
           "username" : username,
           "password": password
         }
-        axios.post('https://new-hris.irfanfath.site/employees/login', data)
+        axios.post('https://api.airindonesia.co.id/employees/login', data)
         .then((res) => {
             console.log(res)
           if(res.status === 200){

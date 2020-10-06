@@ -36,7 +36,7 @@ export default class LoginAdmin extends Component{
           "username" : username,
           "password": password
         }
-        axios.post('https://new-hris.irfanfath.site/admins/login', data)
+        axios.post('https://api.airindonesia.co.id/admins/login', data)
         .then((res) => {
             console.log(res)
           if(res.status === 200){

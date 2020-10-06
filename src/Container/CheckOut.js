@@ -84,7 +84,7 @@ export default class CheckOut extends Component {
         "ipAddress" : this.state.ipAddress
     }
     const data = payload
-    axios.post("https://new-hris.irfanfath.site/attendances", data, {
+    axios.post("https://api.airindonesia.co.id/attendances", data, {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
             Accept: "application/json",

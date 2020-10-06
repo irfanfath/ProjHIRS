@@ -35,7 +35,7 @@ class Presensi extends Component {
 
   handleGetAttendaceById = (employeeId) => {
     console.log(employeeId)
-    axios.get('https://new-hris.irfanfath.site/attendances', {
+    axios.get('https://api.airindonesia.co.id/attendances', {
         headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
             Accept: "application/json",
